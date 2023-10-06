@@ -10,12 +10,11 @@ var userInputSecondNumber = Console.ReadLine();
 int secondNumber = int.Parse(userInputSecondNumber);
 
 
-Console.WriteLine("What do you want to do with those numbers?");
-Console.WriteLine("[A]dd");
 Console.WriteLine("[S]ubtract");
 Console.WriteLine("[M]ultiply");
+Console.WriteLine("What do you want to do with those numbers?");
+Console.WriteLine("[A]dd");
 var userInputSelectedOption = Console.ReadLine();
-
 
 
 if (CompareCaseSensitive(userInputSelectedOption, "A"))
@@ -33,19 +32,19 @@ else if (CompareCaseSensitive(userInputSelectedOption, "M"))
     var multiplication = firstNumber * secondNumber;
     PrintCalculatedEquation(firstNumber, secondNumber, "*", multiplication);
 }
-else 
+else
 {
     Console.WriteLine("Invalid option!");
 }
 
 Console.WriteLine("Press any key to close.");
 
-void PrintCalculatedEquation (int number1, int number2, string @operator, int operation)
+void PrintCalculatedEquation(int number1, int number2, string @operator, int operation)
 {
     Console.WriteLine(number1 + " " + @operator + " " + number2 + " = " + operation);
 }
 
-bool CompareCaseSensitive (string left, string right)
+bool CompareCaseSensitive(string left, string right)
 {
     return left.ToUpper() == right.ToUpper();
 }
